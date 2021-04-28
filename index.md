@@ -3,10 +3,10 @@ Github handy commands
 
 ```markdown
 #1. Adding ssh key to Github Account
-[Add ssh](https://help.github.com/en/enterprise/2.17/user/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
+    https://help.github.com/en/enterprise/2.17/user/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
 
 #2. Recover 2FA for Github Account
-[Recover 2FA](https://docs.github.com/en/github/authenticating-to-github/recovering-your-account-if-you-lose-your-2fa-credentials)
+    https://docs.github.com/en/github/authenticating-to-github/recovering-your-account-if-you-lose-your-2fa-credentials
 
 #3. Github Commands
 - To create new branch:
@@ -44,9 +44,8 @@ Github handy commands
 - Step6: Go to Github repo click “compare and pull request”
 - Step7: click on create pull request
 
-
 #5. Git Stash
-    [git stash](https://www.atlassian.com/git/tutorials/saving-changes/git-stash#:~:text=git%20stash%20temporarily%20shelves%20(or,re%2Dapply%20them%20later%20on.)
+    https://www.atlassian.com/git/tutorials/saving-changes/git-stash#:~:text=git%20stash%20temporarily%20shelves%20(or,re%2Dapply%20them%20later%20on
 
 ```
 
