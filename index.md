@@ -1,10 +1,7 @@
 ### Github
-
 Github handy commands
 
 ```markdown
-Syntax highlighted code block
-
 #1. Adding ssh key to Github Account
 [Add ssh](https://help.github.com/en/enterprise/2.17/user/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
 
@@ -21,7 +18,6 @@ Syntax highlighted code block
 - To Delete Remote Branch
      git push -d origin <branch_name>
 
-
 - To checkout branch:
      git checkout branch_name 
  
@@ -34,17 +30,16 @@ Syntax highlighted code block
      git commit -m “msg”
      git push origin branch_name 
 
- 
 #4. How to Raise PR
-- Step1:  fork the repo
+- Step1: fork the repo
 - Step2: git clone the forked repo from your account
 - Step3: create new branch
             Git checkout -b “branch_name”
 - Step4: make your changes
 - Step5: 
-            git add .
-            git commit -m “msg”
-            git push origin “branch_name”
+        git add .
+        git commit -m “msg”
+        git push origin “branch_name”
 
 - Step6: Go to Github repo click “compare and pull request”
 - Step7: click on create pull request
