@@ -48,27 +48,70 @@ Github handy commands
     https://www.atlassian.com/git/tutorials/saving-changes/git-stash#:~:text=git%20stash%20temporarily%20shelves%20(or,re%2Dapply%20them%20later%20on
 
 ```
+### Docker
+
+Write docker file => Build the Images By Running the docker file => Run the image to bring up the container
+
+```markdown
+Basic Commands for Docker (run the commands where dockerfile present)
+
+- To check running images
+      docker ps 
+- To list the docker images
+      docker images or docker images -a 
+- To forcely delete the image
+      docker rmi -f image_name 
+- To pull the image
+      docker pull image_name 
+- To build the image from the dockerfile
+      docker build -t tag_file -f docker_file
+- To run the Docker image, port1:local machine port, port2: container port
+      docker run  -it -p port1:port2 image_name 
+- To Run the container in background 
+      docker run -d -p port1:port2 image_name        
+- To stopt the conatiner
+      docker stop image_name
+           
+```
+
 
 ### Python
 
 Steps for Python Intsalltaion and Creating virtual Env using pipenv
 
 ```markdown
-Syntax highlighted code block
+#1. Install Home-brew
+      ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-# Python
-## ReactJS
-### PostgresSql
+#2. Using brew To install python
+      brew install python3
+      brew install python
+      
+#3. Using brew To upgrade python
+      brew upgrade python3
+      brew upgrade python
+      
+#3. Using brew To swith python version
+      brew switch python 3.x.x
 
-- Bulleted
-- List
+#4. Using brew To link python
+      brew link python 3.x.x
+      
+#5. Install pip
+      python3 -m pip install --upgrade pip
+      python -m pip install --upgrade pip
 
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+#6. Install pipenv (To create Virtual Env)
+      pipenv —version
+      pip3 install pipenv
+      pip install pipenv
+      
+ #7. To Check the pipenv commands
+      pipenv
+ 
+ #8. Pipenv Commands
+     https://pashupati123.github.io/Pipenv-Packaging-Tool/
+ 
 ```
 
 ### ReactJS
