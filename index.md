@@ -9,40 +9,40 @@ Github handy commands
     https://docs.github.com/en/github/authenticating-to-github/recovering-your-account-if-you-lose-your-2fa-credentials
 
 #3. Github Commands
-- To create new branch:
-     git branch branch_name
+ 3.1 To create new branch:
+        git branch branch_name
     
-- To Delete any branch:
-     git branch -d branch_name
+ 3.2 To Delete any branch:
+        git branch -d branch_name
 
-- To Delete Remote Branch
-     git push -d origin <branch_name>
+ 3.3 To Delete Remote Branch
+        git push -d origin <branch_name>
 
-- To checkout branch:
-     git checkout branch_name 
+ 3.4 To checkout branch:
+        git checkout branch_name 
  
-- To check all branch:
-     git branch --all 
+ 3.5 To check all branch:
+        git branch --all 
 
-- To push the changes:
-     git status
-     git add .
-     git commit -m “msg”
-     git push origin branch_name 
+ 3.6 To push the changes:
+        git status
+        git add .
+        git commit -m “msg”
+        git push origin branch_name 
 
 #4. How to Raise PR
-- Step1: fork the repo
-- Step2: git clone the forked repo from your account
-- Step3: create new branch
-            Git checkout -b “branch_name”
-- Step4: make your changes
-- Step5: 
+  Step1: fork the repo
+  Step2: git clone the forked repo from your account
+  Step3: create new branch
+            Git checkout -b “branch_name” 
+  Step4: make your changes
+  Step5: 
         git add .
         git commit -m “msg”
         git push origin “branch_name”
 
-- Step6: Go to Github repo click “compare and pull request”
-- Step7: click on create pull request
+ Step6: Go to Github repo click “compare and pull request”
+ Step7: click on create pull request
 
 #5. Git Stash
     https://www.atlassian.com/git/tutorials/saving-changes/git-stash#:~:text=git%20stash%20temporarily%20shelves%20(or,re%2Dapply%20them%20later%20on
@@ -55,22 +55,22 @@ Write docker file => Build the Images By Running the docker file => Run the imag
 ```markdown
 Basic Commands for Docker (run the commands where dockerfile present)
 
-- To check running images
-      docker ps 
-- To list the docker images
-      docker images or docker images -a 
-- To forcely delete the image
-      docker rmi -f image_name 
-- To pull the image
-      docker pull image_name 
-- To build the image from the dockerfile
-      docker build -t tag_file -f docker_file
-- To run the Docker image, port1:local machine port, port2: container port
-      docker run  -it -p port1:port2 image_name 
-- To Run the container in background 
-      docker run -d -p port1:port2 image_name        
-- To stopt the conatiner
-      docker stop image_name
+#1. To check running images
+       docker ps 
+#2. To list the docker images
+       docker images or docker images -a 
+#3. To forcely delete the image
+       docker rmi -f image_name 
+#4. To pull the image
+       docker pull image_name 
+#5. To build the image from the dockerfile
+       docker build -t tag_file -f docker_file
+#6. To run the Docker image, port1:local machine port, port2: container port
+       docker run  -it -p port1:port2 image_name 
+#7. To Run the container in background 
+       docker run -d -p port1:port2 image_name        
+#8. To stopt the conatiner
+       docker stop image_name
            
 ```
 
@@ -106,12 +106,33 @@ Steps for Python Intsalltaion and Creating virtual Env using pipenv
       pip3 install pipenv
       pip install pipenv
       
- #7. To Check the pipenv commands
+#7. To Check the pipenv commands
       pipenv
  
- #8. Pipenv Commands
-     https://pashupati123.github.io/Pipenv-Packaging-Tool/
+#8. Pipenv Commands
+      https://pashupati123.github.io/Pipenv-Packaging-Tool/
  
+```
+### Flask
+
+ReactJS Notes
+
+```markdown
+Syntax highlighted code block
+
+# Python
+## ReactJS
+### PostgresSql
+
+- Bulleted
+- List
+
+1. Numbered
+2. List
+
+**Bold** and _Italic_ and `Code` text
+
+[Link](url) and ![Image](src)
 ```
 
 ### ReactJS
@@ -135,7 +156,27 @@ Syntax highlighted code block
 
 [Link](url) and ![Image](src)
 ```
+### NodeJs
 
+ReactJS Notes
+
+```markdown
+Syntax highlighted code block
+
+# Python
+## ReactJS
+### PostgresSql
+
+- Bulleted
+- List
+
+1. Numbered
+2. List
+
+**Bold** and _Italic_ and `Code` text
+
+[Link](url) and ![Image](src)
+```
 ### PostgreSql
 
 PostgreSql Notes
@@ -158,5 +199,25 @@ Syntax highlighted code block
 [Link](url) and ![Image](src)
 ```
 
+### Redis
 
+ReactJS Notes
+
+```markdown
+Syntax highlighted code block
+
+# Python
+## ReactJS
+### PostgresSql
+
+- Bulleted
+- List
+
+1. Numbered
+2. List
+
+**Bold** and _Italic_ and `Code` text
+
+[Link](url) and ![Image](src)
+```
 
