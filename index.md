@@ -139,7 +139,7 @@ Flask is a light wieght web framework,this means flask provides tools,libraries 
           app.debug=True
           app.run(host='0.0.0.0', port=8050)
           
-  #3. Sample code : To connect with PostgreSql Server
+ #3. Sample code : To connect with PostgreSql Server
   
      from flask import Flask
      import pandas as pd
