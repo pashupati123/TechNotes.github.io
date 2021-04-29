@@ -119,8 +119,8 @@ Flask is a light wieght web framework,this means flask provides tools,libraries 
 
 ```markdown
 #1. Install Flask
-  pip install flask
-  pipenv install flask (using venv with help of pipenv tool)
+    pip install flask
+    pipenv install flask (using venv with help of pipenv tool)
   
 #2. Sample Code
 
@@ -141,12 +141,12 @@ Flask is a light wieght web framework,this means flask provides tools,libraries 
           
           
 #3. Sample code : To connect with PostgreSql Server
-  
+    
+    #pipenv install psycopg2-binary
     from flask import Flask
     import pandas as pd
-    import psycopg2  #pipenv install psycopg2-binary
+    import psycopg2  
     import yaml
-    
     app = Flask(__name__)
 
     #For local development
