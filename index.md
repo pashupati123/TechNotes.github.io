@@ -138,6 +138,60 @@ Flask is a light wieght web framework,this means flask provides tools,libraries 
     if __name__ == '__main__':
           app.debug=True
           app.run(host='0.0.0.0', port=8050)
+          
+  #3. Sample code : To connect with PostgreSql Server
+  
+    from flask import Flask
+    import pandas as pd
+    import psycopg2  #pipenv install psycopg2-binary
+    import yaml
+
+    app = Flask(__name__)
+
+    #For local development
+    with open("/secret.yml", "r") as f:
+          pg_secrets = yaml.safe_load(f)
+
+    #For Hosting Server 
+    # with open("/host_path/secret.yml", "r") as f:
+    #     pg_secrets = yaml.safe_load(f)
+
+    dbname = pg_secrets["database"]["pg_db"]
+    host = pg_secrets["database"]["pg_host"]
+    port = pg_secrets["database"]["pg_port"]
+    user = pg_secrets["database"]["pg_username"]
+    password = pg_secrets["database"]["pg_password"]
+
+    connection = psycopg2.connect(user=user, password=password, host=host, port=port, database=dbname)
+    
+    sql = """ Select * from praxisdays.udf_get_all_pot_user_feedbacks(); """
+    df = pd.read_sql_query(sql, connection)
+
+    @app.route('/getrecord')
+    def getrecord():
+          recordJSON = df.to_json(orient='records')
+          return(recordJSON)
+
+    @app.route('/health')
+    def helloIndex():
+         return 'Hello World from Python Flask!'
+    
+    if __name__ == '__main__':
+          app.debug=True
+          app.run(host='0.0.0.0', port=8050)
+
+#4. Format of Secret.yml
+    database:
+    pg_host:
+      pg_server_name
+    pg_port:
+      5432
+    pg_username:
+      your_username
+    pg_password:
+      xxxxxxxxx
+    pg_db:
+      db_name
     
 ```
 
