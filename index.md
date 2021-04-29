@@ -115,24 +115,30 @@ Steps for Python Intsalltaion and Creating virtual Env using pipenv
 ```
 ### Flask
 
-ReactJS Notes
+Flask is a light wieght web framework,this means flask provides tools,libraries and technologies that allow to build a web application.
 
 ```markdown
-Syntax highlighted code block
+#1. Install Flask
+  pip install flask
+  pipenv install flask (using venv with help of pipenv tool)
+  
+#2. Sample Code
 
-# Python
-## ReactJS
-### PostgresSql
+    from flask import Flask, jsonify, request 
+    from flask_cors import CORS
 
-- Bulleted
-- List
+    # Create the application.
+    app = Flask(__name__)
+    CORS(app)
 
-1. Numbered
-2. List
+    @app.route('/health')
+    def helloIndex():
+          return 'Hello World from Python Flask!'
 
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+    if __name__ == '__main__':
+          app.debug=True
+          app.run(host='0.0.0.0', port=8050)
+    
 ```
 
 ### ReactJS
