@@ -111,7 +111,83 @@ Steps for Python Intsalltaion and Creating virtual Env using pipenv
  
 #8. Pipenv Commands
       https://pashupati123.github.io/Pipenv-Packaging-Tool/
- 
+
+#9. Range vs Xrange
+      xrange returns an iterator and only keeps one number in memory at a time. range keeps the entire list of numbers in memory.
+
+#10. Immutable vs Mutable data type
+      Whenever an object is instantiated, it is assigned a unique object id. The type of the object is defined at the runtime and it can’t be changed afterwards.         However, it’s state can be changed if it is a mutable object.
+      mmutable: int, float, bool, string, unicode, tuple.
+      Mutable: array, dict, set, list
+      
+#11. Exception Handling
+      https://www.w3schools.com/python/python_try_except.asp
+      Syntax Error: As the name suggest this error is caused by wrong syntax in the code. It leads to the termination of the program.
+      Exceptions: Exceptions are raised when the program is syntactically correct but the code resulted in an error. This error does not stop the execution of the       program, however, it changes the normal flow of the program.
+      
+      Sample Code
+      
+          try:
+            # Some Code.... 
+          except:
+            # optional block
+            # Handling of exception (if required)
+          else:
+            # execute if no exception
+          finally:
+            # Some code .....(always executed)
+          
+          AND 
+          
+          try:  
+            raise NameError("Hi there")  # Raise Error 
+          except NameError: 
+            print "An exception"
+          raise  # To determine whether the exception was raised or not 
+
+#12. Python Class
+      Class: https://www.w3schools.com/python/python_classes.asp
+      Class Parent:
+         def __init__(self, name, age):
+                  self.name=name
+                  self.age=age
+        
+         def getDate(self):
+                  return(self.name+self.age)
+
+      Class Child(Parent):
+          def __init__(self,name,age):
+             super().__init__(name, age)
+
+      p1=Child(x,6)
+      print(p1.getData())
+
+#13. Implement Graph in python 
+
+      graph={“v1”:[],”v2”:[]……}
+      Using dict where key value will be list
+
+      Queue:
+           List = []
+           list.add(item) -> similar to queue
+           Pop element from front:
+           element = List[0]
+           List.remove(element)
+
+      Stack:
+          Pop element from last
+          element = List[len(List)-1]
+          List.remove(element)
+          
+#14. Rsyslog
+     Rsyslog is an Open Source logging program, which is the most popular logging mechanism in a huge number of Linux distributions.
+     Rsyslog daemon in CentOS can be configured to run as a server in order collect log messages from multiple network devices.
+     https://www.tecmint.com/install-rsyslog-centralized-logging-in-centos-ubuntu/
+
+#15. IPC mechanism
+     Inter Process Communication (IPC) refers to a mechanism, where the operating systems allow various processes to communicate with each other. This involves          synchronizing their actions and managing shared data.
+     https://www.geeksforgeeks.org/inter-process-communication-ipc/#:~:text=Inter%20process%20communication%20(IPC)%20is,of%20co%2Doperation%20between%20them
+     
 ```
 ### Flask
 
