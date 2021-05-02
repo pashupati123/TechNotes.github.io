@@ -332,8 +332,81 @@ ReactJS Notes
         4. Clear the cache
             npm cache clean --force
         5. Most of time Delete the node_module and again do npm install works
+
+#3. ReactJs Api Call
+
+       Axios : https://www.npmjs.com/package/axios
+       Axios install : npm install axios
+       Sample code for Class Component:
        
-#3. ReactJs Testing Framework
+               export class Apicall extends Component {
+                        constructor(props) {
+                        super(props)
+                        this.state = {
+                              data: [],
+                              }
+                        }
+
+                       apicall = () => {
+                            axios.get('https://jsonplaceholder.typicode.com/users').then(response => {
+                            this.setState({ data: response.data })
+                            console.log(this.state.data)
+                           })
+                       }
+                       render() {
+                          return(
+                          <div>
+                          <button onClick={this.apicall}>Api Call</button>
+                          <table>
+                          <tr>
+                         <td>id</td>
+                         <td>name</td>
+                         </tr>
+                         {this.state.data.map(index => {
+                                   return (
+                                            <tr>
+                                            <td>{index.id}</td>
+                                            <td>{index.address.street}</td>
+                                            </tr>
+                                          )
+                          })}
+                        </table>
+                        </div>
+                          )
+                       }
+                 }
+                 
+                 
+         Sample code for Functional Component:
+             
+                 import React,{useState,useEffect} from 'react'
+                 import axios from 'axios'
+
+                 export default function Axiosfun() {
+                      const [myData,setMydata] = useState([])
+                      
+                      const apicall = () => {
+                                axios.get('https://jsonplaceholder.typicode.com/users').then(
+                                           res=>{
+                                                   setMydata(res.data)
+                                                   console.log(res.data)
+                                                 }
+                                         )
+                        }
+
+                       useEffect(()=>{
+                                 apicall()
+                                },[])
+                                
+                        return (
+                               <div>
+                                     <h1>I m from Axios Function Component!!</h1>
+                                </div>
+                                )
+                   }
+         
+                 
+#4. ReactJs Testing Framework
        
        JEST:Jest is the javascript test runner tool library used for testing react application .it can be installed using npm.
        Other testing tool: enzyme,mocha
@@ -358,8 +431,49 @@ ReactJS Notes
      
        Sample Code for JEST & Enzyme
             
-           
+            //import { mount, shallow, render } from ‘enzyme';
+           //Mount: Full DOM rendering including child components
+           //Shallow: Renders only the single component, not including its children. 
+          //Render: Renders to static HTML, including children
+          //simulator allows to execute the application under test as if it was the actual device.
 
+           import React from 'react'
+           import ReactDOM from 'react-dom'
+           import Button from './Button'
+           import { render } from '@testing-library/react'
+           import { shallow } from 'enzyme'
+           import '@testing-library/jest-dom/extend-expect'
+
+           describe('Testing Demo Jest ', () => {
+                it('button render without crashing', () => {
+               const div = document.createElement('div')
+               ReactDOM.render(<Button label={'Click Me'} />, div)
+               })
+
+          it('renders button correctly', () => {
+               const { getByTestId } = render(<Button label="Click Me"></Button>)
+               expect(getByTestId('button')).toHaveTextContent('Click Me')
+               })
+          })
+
+          describe('Testing Demo using Enzyme', () => {
+                  it('knows that 2 and 2 make 4', () => {
+                        expect(2 + 2).toBe(4);
+                });
+                 it('snapshot component test', () => {
+                       const wrapper = shallow(<Button label={'Click M'} />)
+                       expect(wrapper).toMatchSnapshot()
+                })
+                it('testing button onClick handle', () => {
+                      const wrapper = shallow(<Button label={'Click Me'} />)
+                      const incrementBtn = wrapper.find('button');
+                      incrementBtn.simulate('click');
+                      const text = wrapper.find('p').text();
+                      expect(text).toEqual('count:1');
+                 })
+           })
+            
+           
     
 ```
 ### NodeJs
