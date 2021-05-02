@@ -278,21 +278,89 @@ Flask is a light wieght web framework,this means flask provides tools,libraries 
 ReactJS Notes
 
 ```markdown
-Syntax highlighted code block
+#1. React Tutorial important Links
 
-# Python
-## ReactJS
-### PostgresSql
+    1.Introduction: https://www.geeksforgeeks.org/react-js-introduction-working/
+    2.Create Components: https://www.tutorialspoint.com/reactjs/reactjs_components.htm
+    3.Hooks:
+         1. https://www.andreasreiterer.at/react-useeffect-hook-loop/
+         2. https://overreacted.io/a-complete-guide-to-useeffect/
+         3. https://egghead.io/lessons/react-use-react-useeffect-hook-to-see-how-many-times-component-mounts-and-unmounts?pl=learn-react-lazy-memo-usestate-and-               useeffect-in-10-minutes-3bd981f6
+         4. Context API: https://www.youtube.com/watch?v=6RhOzQciVwI&list=PL4cUxeGkcC9hNokByJilPg5g9m2APUePI&index=1
+         
+     4.React SearchBar: https://www.npmjs.com/package/material-ui-search-bar
+     5.React Charts:
+         1.3d pie chart: https://react-d3-library.github.io/
+         2.https://www.npmjs.com/package/react-charts
+         3.https://react-charts.js.org/examples/axis-options
+     
+     6.How to call two function on click button: https://stackoverflow.com/questions/26069238/call-multiple-functions-onclick-reactjs
+     7.Onclick error: https://stackoverflow.com/questions/41429020/reactjs-button-onclick-gets-called-during-render
+     8.Component Life Cycle: https://www.geeksforgeeks.org/reactjs-lifecycle-components/
+     9.Material UI: https://material-ui.com/
+     
+#2. Steps To create the React App
+    
+       1. Install NodeJs pacakage: 
+          https://nodejs.org/en/
+          
+       Commands: 
+       1. Install nvm using curl 
+          curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
+       2. load nvm
+           export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+           [-s "$NVM_DIR/nvm.sh"] && \. "$NVM_DIR/nvm.sh"
+       3. Verify Installation
+           command -v nvm 
+       4. Install Node
+           nvm install 12.14.0
+       5. Check all version of Node installed
+           nvm ls
+       6. Switch Node
+           nvm use 12.14.0
+       7. To make the code Linted
+           To check run:   npm run lint
+           To fix the lint:  npm run lint — —fix
+           
+         Troubleshoot
+        1. Source command update bash_profile
+            source ~/.nvm/nvm.sh
+        3. Upgrade npm version
+            npm install -g npm@6.13.4
+        3. npx cannot be found
+            npm install -g npx
+        4. Clear the cache
+            npm cache clean --force
+        5. Most of time Delete the node_module and again do npm install works
+       
+#3. ReactJs Testing Framework
+       
+       JEST:Jest is the javascript test runner tool library used for testing react application .it can be installed using npm.
+       Other testing tool: enzyme,mocha
 
-- Bulleted
-- List
+       JEST Installation:
+           npm install —save jest@22.3.0
+       
+       Jest File structure
+            Create a test file in a __tests__/*.js directory(Any files inside a folder named __tests__ are considered tests)
+            Create a test file with *.spec.js or *.test.js as part of the filename
+            Use describe and it block
+            Verify that Jest automatically recognizes these test files
+            
+       JEST Link:
+            https://rossbulat.medium.com/testing-in-react-with-jest-and-enzyme-an-introduction-99ce047dfcf8
+            https://pusher.com/tutorials/react-jest-enzyme
+            https://app.pluralsight.com/library/courses/testing-react-applications-jest/table-of-contents
+            https://blog.logrocket.com/testing-state-changes-in-react-functional-components/
+      
+       Jest & enzyme: 1) https://www.npmjs.com/package/jest-enzyme
+                      2)https://medium.com/@rossbulat/testing-in-react-with-jest-and-enzyme-an-introduction-99ce047dfcf8
+     
+       Sample Code for JEST & Enzyme
+            
+           
 
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+    
 ```
 ### NodeJs
 
